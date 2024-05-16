@@ -14,10 +14,10 @@ import java.util.List;
 
 @Dao
 public interface CidadeDao {
-    @Query("SELECT * FROM City WHERE id=idCity LIMIT 1")
+    @Query("SELECT * FROM city WHERE id=idCity LIMIT 1")
     Cidade getUser(int idCity);
 
-    @Query("SELECT * FROM City")
+    @Query("SELECT * FROM city")
     List<Cidade> getAll();
 
     @Insert
