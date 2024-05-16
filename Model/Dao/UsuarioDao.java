@@ -11,12 +11,15 @@ import java.util.List;
 
 @Dao
 public interface UsuarioDao {
-    @Query("SELECT * FROM Usuario WHERE id=:idUsu LIMIT 1")
+    @Query("SELECT * FROM usuario WHERE id=:idUsu LIMIT 1")
     Usuario getUser(int idUsu);
 
     @Query("SELECT * FROM Usuario")
     List<Usuario> getAll();
 
+    @Query("SELECT * FROM usuario WHERE login like :userLogin")
+    Usuario getUserByLogin(String userLogin);
+    
     @Insert
     void insertAll(Usuario usuario);
     @Update
