@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey;
 public class Usuario {
     @PrimaryKey(autoGenerate = true)
     int id;
-    String nome;
+    String name;
     String email;
-    String password
+    String password;
 
     public Usuario(){}
 
@@ -21,12 +21,12 @@ public class Usuario {
         this.id = id;    
     }
     
-    public String getNome() {
-        return nome;    
+    public String getName() {
+        return name;    
     }
     
-    public void setNome(String nome) {
-        this.nome = nome;    
+    public void setName(String nome) {
+        this.name = name;    
     }
     
     public String getEmail() {
@@ -37,11 +37,18 @@ public class Usuario {
         this.email = email;    
     }
 
-
+    
+    public String getPassword() {
+        return password;
+    }
+    
+    public void setPassword(String password) {
+        this.password = password;
+    }    
     
     @Override
     public String toString() {
-        return id +": " + nome + ", email=" + email;
+        return id +": " + name + ", email=" + email;
     }
-
+    
 }
